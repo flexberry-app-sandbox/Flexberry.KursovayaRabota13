@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovaya-rabota-считыватель-e",
+  "editForm": "i-i-s-kursovaya-rabota-считыватель-e",
+  "external": false,
+  "caption": "Считыватели смарт-карты",
+  "name": "IISKursovayaRabotaСчитывательL",
+  "className": "СчитывательL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-считыватель",
+      "modelProjection": "СчитывательL"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+﻿{
+  "name": "IISKursovayaRabotaКомната",
+  "modelName": "i-i-s-kursovaya-rabota-комната",
+  "className": "Комната",
+  "nameSpace": "IIS.KursovayaRabota",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количествоМест",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерКомнаты",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "этаж",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "считыватель",
+      "relatedTo": "i-i-s-kursovaya-rabota-считыватель",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "КомнатаE",
+      "modelName": "i-i-s-kursovaya-rabota-комната",
+      "attrs": [
+        {
+          "name": "номерКомнаты",
+          "caption": "Номер комнаты",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "этаж",
+          "caption": "Этаж",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "количествоМест",
+          "caption": "Количество мест",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "УникальныйКод",
+          "lookupValueField": "уникальныйКод",
+          "relationName": "Считыватель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 3,
+          "type": "standard",
+          "caption": "Уникальный код считывателя",
+          "name": "считыватель",
+          "relatedTo": "i-i-s-kursovaya-rabota-считыватель",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "КомнатаL",
+      "modelName": "i-i-s-kursovaya-rabota-комната",
+      "attrs": [
+        {
+          "name": "номерКомнаты",
+          "caption": "Номер комнаты",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "этаж",
+          "caption": "Этаж",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "количествоМест",
+          "caption": "Количество мест",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Считыватель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "уникальныйКод",
+              "caption": "Уникальный код считывателя",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Уникальный код считывателя",
+          "name": "считыватель",
+          "relatedTo": "i-i-s-kursovaya-rabota-считыватель",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

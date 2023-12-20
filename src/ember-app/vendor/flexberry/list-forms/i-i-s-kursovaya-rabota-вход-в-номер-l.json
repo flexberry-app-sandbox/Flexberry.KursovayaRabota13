@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovaya-rabota-вход-в-номер-e",
+  "editForm": "i-i-s-kursovaya-rabota-вход-в-номер-e",
+  "external": false,
+  "caption": "Вход в номер",
+  "name": "IISKursovayaRabotaВходВНомерL",
+  "className": "ВходВНомерL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-вход-в-номер",
+      "modelProjection": "ВходВНомерL"
+    }
+  ]
+}

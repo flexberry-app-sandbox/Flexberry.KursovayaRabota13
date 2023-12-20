@@ -1,0 +1,68 @@
+﻿{
+  "name": "IISKursovayaRabotaВходВНомер",
+  "modelName": "i-i-s-kursovaya-rabota-вход-в-номер",
+  "className": "ВходВНомер",
+  "nameSpace": "IIS.KursovayaRabota",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "входГостя",
+      "relatedTo": "i-i-s-kursovaya-rabota-вход-гостя",
+      "inverse": "входВНомер"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ВходВНомерE",
+      "modelName": "i-i-s-kursovaya-rabota-вход-в-номер",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ВходГостяE",
+          "caption": "Вход гостя",
+          "name": "входГостя",
+          "relatedTo": "i-i-s-kursovaya-rabota-вход-гостя",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ВходВНомерL",
+      "modelName": "i-i-s-kursovaya-rabota-вход-в-номер",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

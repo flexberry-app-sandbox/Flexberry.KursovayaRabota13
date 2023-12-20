@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Считыватели смарт-карты",
+  "name": "IISKursovayaRabotaСчитывательE",
+  "className": "СчитывательE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-считыватель",
+      "modelProjection": "СчитывательE"
+    }
+  ]
+}

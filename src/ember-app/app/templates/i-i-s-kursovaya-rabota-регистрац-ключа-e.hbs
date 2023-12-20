@@ -1,0 +1,123 @@
+<h3 class="ui header">{{t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-rabota-регистрац-ключа-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерКлюча
+      class=(if (v-get validationModel "номерКлюча" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.номерКлюча-caption")
+      data-test-i-i-s-kursovaya-rabota-регистрац-ключа-e-номерКлюча=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерКлюча" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.комната-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.комната
+      displayAttributeName="номерКомнаты"
+      autocomplete=true
+      relationName="комната"
+      projection="КомнатаL"
+      title=(t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.комната-caption")
+      readonly=readonly
+      componentName="комнатаLookup"
+      class=(if (v-get validationModel "комната" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-rabota-регистрац-ключа-e-комната=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "комната" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.карта-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.карта
+      displayAttributeName="номерКарты"
+      autocomplete=true
+      relationName="карта"
+      projection="КартаL"
+      title=(t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.карта-caption")
+      readonly=readonly
+      componentName="картаLookup"
+      class=(if (v-get validationModel "карта" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-rabota-регистрац-ключа-e-карта=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "карта" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.комната.считыватель.уникальныйКод
+      class=(if (v-get validationModel.комната.считыватель "уникальныйКод" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.комната.считыватель.уникальныйКод-caption")
+      data-test-i-i-s-kursovaya-rabota-регистрац-ключа-e-комната-считыватель-уникальныйКод=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.комната.считыватель "уникальныйКод" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.срокДействия-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.срокДействия
+      class=(if (v-get validationModel "срокДействия" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-rabota-регистрац-ключа-e-срокДействия=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "срокДействия" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.сотрудник-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудник
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="сотрудник"
+      projection="СотрудникL"
+      title=(t "forms.i-i-s-kursovaya-rabota-регистрац-ключа-e.сотрудник-caption")
+      readonly=readonly
+      componentName="сотрудникLookup"
+      class=(if (v-get validationModel "сотрудник" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-rabota-регистрац-ключа-e-сотрудник=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудник" "message")}}
+  </div>
+</form>

@@ -1,0 +1,269 @@
+﻿{
+  "name": "IISKursovayaRabotaРегистрацКлюча",
+  "modelName": "i-i-s-kursovaya-rabota-регистрац-ключа",
+  "className": "РегистрацКлюча",
+  "nameSpace": "IIS.KursovayaRabota",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерКлюча",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "срокДействия",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "карта",
+      "relatedTo": "i-i-s-kursovaya-rabota-карта",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "комната",
+      "relatedTo": "i-i-s-kursovaya-rabota-комната",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудник",
+      "relatedTo": "i-i-s-kursovaya-rabota-сотрудник",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "РегистрацКлючаE",
+      "modelName": "i-i-s-kursovaya-rabota-регистрац-ключа",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номерКлюча",
+          "caption": "Ключ",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "срокДействия",
+          "caption": "Карта действует до:",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерКомнаты",
+          "lookupValueField": "номерКомнаты",
+          "relationName": "Комната",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Комната.Считыватель",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "уникальныйКод",
+                  "caption": "Уникальный код",
+                  "hidden": false,
+                  "index": 4
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "считыватель",
+              "relatedTo": "i-i-s-kursovaya-rabota-считыватель",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [],
+          "index": 2,
+          "type": "standard",
+          "caption": "Номер комнаты",
+          "name": "комната",
+          "relatedTo": "i-i-s-kursovaya-rabota-комната",
+          "inverse": null
+        },
+        {
+          "lookupValue": "НомерКарты",
+          "lookupValueField": "номерКарты",
+          "relationName": "Карта",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 3,
+          "type": "standard",
+          "caption": "Номер карты",
+          "name": "карта",
+          "relatedTo": "i-i-s-kursovaya-rabota-карта",
+          "inverse": null
+        },
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Сотрудник",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 6,
+          "type": "standard",
+          "caption": "Ответственный",
+          "name": "сотрудник",
+          "relatedTo": "i-i-s-kursovaya-rabota-сотрудник",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "РегистрацКлючаL",
+      "modelName": "i-i-s-kursovaya-rabota-регистрац-ключа",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номерКлюча",
+          "caption": "Ключ",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "срокДействия",
+          "caption": "Карта действует до:",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Комната",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Комната.Считыватель",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "уникальныйКод",
+                  "caption": "Уникальный код",
+                  "hidden": false,
+                  "index": 4
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "считыватель",
+              "relatedTo": "i-i-s-kursovaya-rabota-считыватель",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерКомнаты",
+              "caption": "Номер комнаты",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер комнаты",
+          "name": "комната",
+          "relatedTo": "i-i-s-kursovaya-rabota-комната",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Карта",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерКарты",
+              "caption": "Номер карты",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер карты",
+          "name": "карта",
+          "relatedTo": "i-i-s-kursovaya-rabota-карта",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудник",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "Ответственный",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Ответственный",
+          "name": "сотрудник",
+          "relatedTo": "i-i-s-kursovaya-rabota-сотрудник",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,227 @@
+﻿{
+  "name": "IISKursovayaRabotaГость",
+  "modelName": "i-i-s-kursovaya-rabota-гость",
+  "className": "Гость",
+  "nameSpace": "IIS.KursovayaRabota",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "данныеПаспорта",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаРождения",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "почта",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "телефон",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фИО",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "регистрацКлюча",
+      "relatedTo": "i-i-s-kursovaya-rabota-регистрац-ключа",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ГостьE",
+      "modelName": "i-i-s-kursovaya-rabota-гость",
+      "attrs": [
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаРождения",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "данныеПаспорта",
+          "caption": "Серия и номер паспорта",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "телефон",
+          "caption": "Телефон",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "почта",
+          "caption": "E-mail",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерКлюча",
+          "lookupValueField": "номерКлюча",
+          "relationName": "РегистрацКлюча",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "РегистрацКлюча.Комната",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "номерКомнаты",
+                  "caption": "Комната",
+                  "hidden": false,
+                  "index": 6
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "комната",
+              "relatedTo": "i-i-s-kursovaya-rabota-комната",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [],
+          "index": 5,
+          "type": "standard",
+          "caption": "Номер ключа",
+          "name": "регистрацКлюча",
+          "relatedTo": "i-i-s-kursovaya-rabota-регистрац-ключа",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ГостьL",
+      "modelName": "i-i-s-kursovaya-rabota-гость",
+      "attrs": [
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаРождения",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "данныеПаспорта",
+          "caption": "Серия и номер паспорта",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "телефон",
+          "caption": "Телефон",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "почта",
+          "caption": "E-mail",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "РегистрацКлюча",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "РегистрацКлюча.Комната",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "номерКомнаты",
+                  "caption": "Комната",
+                  "hidden": false,
+                  "index": 6
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "комната",
+              "relatedTo": "i-i-s-kursovaya-rabota-комната",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерКлюча",
+              "caption": "Номер ключа",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер ключа",
+          "name": "регистрацКлюча",
+          "relatedTo": "i-i-s-kursovaya-rabota-регистрац-ключа",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "РегистрацКлюча",
+      "projection": "РегистрацКлючаL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Гости",
+  "name": "IISKursovayaRabotaГостьE",
+  "className": "ГостьE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-гость",
+      "modelProjection": "ГостьE"
+    }
+  ]
+}

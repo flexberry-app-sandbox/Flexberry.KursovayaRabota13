@@ -1,0 +1,95 @@
+﻿{
+  "applicationCaption": "Kursovaya rabota",
+  "applicationTitle": "Kursovaya rabota",
+  "items": [
+    {
+      "link": null,
+      "menuName": "отель",
+      "caption": "Отель",
+      "title": "Отель",
+      "children": [
+        {
+          "link": "i-i-s-kursovaya-rabota-комната-l",
+          "menuName": null,
+          "caption": "Комнаты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-rabota-карта-l",
+          "menuName": null,
+          "caption": "Карты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-rabota-считыватель-l",
+          "menuName": null,
+          "caption": "Считыватели",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": null,
+          "menuName": "персонал",
+          "caption": "Персонал",
+          "title": "Персонал",
+          "children": [
+            {
+              "link": "i-i-s-kursovaya-rabota-сотрудник-l",
+              "menuName": null,
+              "caption": "Сотрудник",
+              "title": "Сотрудник",
+              "children": null
+            },
+            {
+              "link": "i-i-s-kursovaya-rabota-должности-l",
+              "menuName": null,
+              "caption": "Должности",
+              "title": "Должности",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "клиенты",
+          "caption": "Клиенты",
+          "title": "Клиенты",
+          "children": [
+            {
+              "link": "i-i-s-kursovaya-rabota-гость-l",
+              "menuName": null,
+              "caption": "Гости",
+              "title": "Гость",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "документация",
+          "caption": "Документация",
+          "title": "Документация",
+          "children": [
+            {
+              "link": "i-i-s-kursovaya-rabota-регистрац-ключа-l",
+              "menuName": null,
+              "caption": "Регистрация смарт-ключа",
+              "title": "Регистрац ключа",
+              "children": null
+            },
+            {
+              "link": "i-i-s-kursovaya-rabota-вход-в-номер-l",
+              "menuName": null,
+              "caption": "Вход в номер",
+              "title": "Вход в номер",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

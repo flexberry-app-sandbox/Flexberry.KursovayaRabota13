@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovaya-rabota-комната-e",
+  "editForm": "i-i-s-kursovaya-rabota-комната-e",
+  "external": false,
+  "caption": "Комнаты",
+  "name": "IISKursovayaRabotaКомнатаL",
+  "className": "КомнатаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-комната",
+      "modelProjection": "КомнатаL"
+    }
+  ]
+}

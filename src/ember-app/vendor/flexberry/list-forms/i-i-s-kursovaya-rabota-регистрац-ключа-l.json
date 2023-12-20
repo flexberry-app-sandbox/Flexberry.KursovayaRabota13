@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovaya-rabota-регистрац-ключа-e",
+  "editForm": "i-i-s-kursovaya-rabota-регистрац-ключа-e",
+  "external": false,
+  "caption": "Регистрация смарт-ключа",
+  "name": "IISKursovayaRabotaРегистрацКлючаL",
+  "className": "РегистрацКлючаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-регистрац-ключа",
+      "modelProjection": "РегистрацКлючаL"
+    }
+  ]
+}

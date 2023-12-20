@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "гость",
+      "displayAttributeName": "фИО",
+      "required": true,
+      "relationName": "ВходГостя.Гость",
+      "projection": "ГостьL",
+      "detailModelName": "i-i-s-kursovaya-rabota-вход-гостя"
+    }
+  ],
+  "external": false,
+  "caption": "Вход в номер",
+  "name": "IISKursovayaRabotaВходВНомерE",
+  "className": "ВходВНомерE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-вход-в-номер",
+      "modelProjection": "ВходВНомерE"
+    }
+  ]
+}

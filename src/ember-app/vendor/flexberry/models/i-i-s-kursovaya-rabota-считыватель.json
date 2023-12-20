@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISKursovayaRabotaСчитыватель",
+  "modelName": "i-i-s-kursovaya-rabota-считыватель",
+  "className": "Считыватель",
+  "nameSpace": "IIS.KursovayaRabota",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "уникальныйКод",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СчитывательE",
+      "modelName": "i-i-s-kursovaya-rabota-считыватель",
+      "attrs": [
+        {
+          "name": "уникальныйКод",
+          "caption": "Уникальный код",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "СчитывательL",
+      "modelName": "i-i-s-kursovaya-rabota-считыватель",
+      "attrs": [
+        {
+          "name": "уникальныйКод",
+          "caption": "Уникальный код",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

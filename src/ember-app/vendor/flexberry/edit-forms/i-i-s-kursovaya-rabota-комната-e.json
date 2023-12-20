@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Считыватель",
+      "projection": "СчитывательL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Комнаты",
+  "name": "IISKursovayaRabotaКомнатаE",
+  "className": "КомнатаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-комната",
+      "modelProjection": "КомнатаE"
+    }
+  ]
+}

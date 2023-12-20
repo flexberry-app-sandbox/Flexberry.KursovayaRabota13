@@ -1,0 +1,97 @@
+﻿{
+  "name": "IISKursovayaRabotaВходГостя",
+  "modelName": "i-i-s-kursovaya-rabota-вход-гостя",
+  "className": "ВходГостя",
+  "nameSpace": "IIS.KursovayaRabota",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "гость",
+      "relatedTo": "i-i-s-kursovaya-rabota-гость",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "входВНомер",
+      "relatedTo": "i-i-s-kursovaya-rabota-вход-в-номер",
+      "inverse": "входГостя"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ВходГостяE",
+      "modelName": "i-i-s-kursovaya-rabota-вход-гостя",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Гость",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Гость.РегистрацКлюча",
+              "belongsTo": [
+                {
+                  "lookupValue": null,
+                  "lookupValueField": null,
+                  "relationName": "Гость.РегистрацКлюча.Комната",
+                  "belongsTo": [],
+                  "hidden": false,
+                  "attrs": [
+                    {
+                      "name": "номерКомнаты",
+                      "caption": "Комната",
+                      "hidden": false,
+                      "index": 2
+                    }
+                  ],
+                  "index": -1,
+                  "type": null,
+                  "caption": "",
+                  "name": "комната",
+                  "relatedTo": "i-i-s-kursovaya-rabota-комната",
+                  "inverse": null
+                }
+              ],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "номерКлюча",
+                  "caption": "Карта",
+                  "hidden": false,
+                  "index": 1
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "регистрацКлюча",
+              "relatedTo": "i-i-s-kursovaya-rabota-регистрац-ключа",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [],
+          "index": 0,
+          "type": "standard",
+          "caption": "Гость",
+          "name": "гость",
+          "relatedTo": "i-i-s-kursovaya-rabota-гость",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
